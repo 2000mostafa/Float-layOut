@@ -1,0 +1,154 @@
+/* blue -->  rgb(125, 208, 237) */
+/* dark ---> rgb(119, 119, 119) */
+/* Reset  */
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   list-style: none;
+   text-decoration: none;
+}
+body {
+   font-family: "Dosis", sans-serif;
+   background-color: rgb(233, 237, 239);
+   min-height: 100vh;
+}
+
+.clr {
+   clear: both;
+}
+
+.plans {
+   width: 70%;
+   margin: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.plans .plan {
+   float: left;
+   width: calc((100% - 40px) / 3);
+   background-color: #fff;
+   border-radius: 5px;
+   overflow: hidden;
+   text-align: center;
+   padding-bottom: 40px;
+   cursor: pointer;
+   transition: transform 0.5s;
+}
+
+.plans .plan:hover {
+   transform: scale(1.1);
+}
+
+.plans .plan:nth-child(1):hover ~ .plan-info .progress .progress-inner {
+   width: 5%;
+}
+
+.plans .plan:nth-child(2):hover ~ .plan-info .progress .progress-inner {
+   width: 20%;
+}
+
+.plans .plan:nth-child(2):hover ~ .plan-info li:nth-child(2) .progress .progress-inner {
+   width: 50%;
+}
+
+.plans .plan:nth-child(3):hover ~ .plan-info .progress .progress-inner {
+   width: 100%;
+}
+
+.plans .plan:nth-child(2) {
+   margin: 0 20px;
+}
+
+.plans .plan h4 {
+   background-color: rgb(125, 208, 237);
+   padding: 15px;
+}
+
+.plans .plan .price {
+   font-size: 35px;
+   font-weight: 700;
+   padding: 15px 0;
+}
+
+.plans .plan .placeholder {
+   padding-top: 30px;
+}
+
+.plans .plan .placeholder span {
+   display: block;
+   height: 4px;
+   border-radius: 50px;
+   background-color: #ededed;
+   margin: 5px auto;
+}
+
+.plans .plan .placeholder span:nth-child(1),
+.plans .plan .placeholder span:nth-child(3) {
+   width: 80%;
+}
+
+.plans .plan .placeholder span:nth-child(2),
+.plans .plan .placeholder span:nth-child(4) {
+   width: 90%;
+}
+.plans .plan .placeholder span:nth-child(5) {
+   width: 70%;
+}
+
+.plans .plan-info {
+   background-color: #fff;
+   border-radius: 10px;
+   margin-top: 40px;
+   padding: 30px;
+}
+
+.plans .plan-info .text h5:nth-child(1) {
+   float: left;
+}
+
+.plans .plan-info .text h5:nth-child(2) {
+   float: right;
+}
+
+.plans .plan-info .progress {
+   height: 5px;
+   background-color: #ededed;
+   overflow: hidden;
+   border-radius: 50px;
+}
+
+.plans .plan-info .progress .progress-inner {
+   height: 100%;
+   width: 0;
+   background-color: rgb(125, 208, 237);
+   transition: width 0.5s;
+}
+
+.plans .plan-info li {
+   margin-bottom: 15px;
+}
+
+/* Media  */
+@media (max-width: 767.98px) {
+   .plans .plan {
+      width: 100%;
+      margin: 40px 0;
+   }
+
+   .plans {
+      width: 90%;
+      position: static;
+      transform: none;
+   }
+
+   .plans .plan:nth-child(2) {
+      margin: auto;
+   }
+}
